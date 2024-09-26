@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 
+app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -25,7 +26,7 @@ def index():
     return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=4410)
 
 
 
